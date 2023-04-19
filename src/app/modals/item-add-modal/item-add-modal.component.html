@@ -1,6 +1,11 @@
-<div class="modal">
+
+    <div class="modal-header">
+        <h4 class="modal-title">Add Item</h4>
+        <button type="button" class="btn-close" 
+            data-bs-dismiss="modal" aria-label="Close"
+            (click)="bsModalRef.hide()"></button>
+    </div>
     <div class="modal-body">
-        <h4>Add Item</h4>
         <form [formGroup]="itemForm" (ngSubmit)="saveToList()">
             <div class="col-md-6">
                 <label>Number of Items : </label> {{numberOfItems}}
@@ -10,8 +15,7 @@
             </div>
             <div class="col-md-6">
                 <input type="text" class="form-control" formControlName="name">
-                <button class="button mt-1" type="submit">Save</button>
+                <button class="btn btn-primary mt-1" type="submit">Save</button>
             </div>
         </form>
     <div>
-</div>
